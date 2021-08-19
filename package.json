@@ -1,0 +1,23 @@
+{
+  "name": "cucu",
+  "version": "1.0.0",
+  "description": "UI Automation using Playwright and Cucumber BDD ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jidmadhu/cucu.git"
+  },
+  "author": "Jidhu Madhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jidmadhu/cucu/issues"
+  },
+  "homepage": "https://github.com/jidmadhu/cucu#readme",
+  "dependencies": {
+    "@playwright/test": "^1.14.0",
+    "typescript": "^4.3.5"
+  }
+}
