@@ -4,11 +4,16 @@
   "description": "UI Automation using Playwright and Cucumber BDD ",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "bdd-test": "tsc && cucumber-js src/features/*.feature --dry-run --require src/core/*.ts --require src/pages/*.ts --require src/support/*.ts --require src/test/*.ts",
+    "test": "cucumber-js ",
+    "test-run": "tsc && cucumber-js src/features/*.feature -p default"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jidmadhu/cucu.git"
+  },
+  "engines": {
+    "node": ">=14"
   },
   "author": "Jidhu Madhu",
   "license": "ISC",
@@ -18,8 +23,22 @@
   "homepage": "https://github.com/jidmadhu/cucu#readme",
   "dependencies": {
     "@cucumber/cucumber": "^7.3.1",
-    "@playwright/test": "^1.14.0",
     "properties-reader": "^2.2.0",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.1",
+    "@cucumber/html-formatter": "16.0.1",
+    "cucumber-pretty": "^6.0.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "expect": "27.0.6",
+    "playwright": "^1.14.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@playwright/test": "^1.14.0",
+    "@typescript-eslint/eslint-plugin": "4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "@types/node": "16.6.0",
+    "properties-reader": "^2.2.0",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.5"
   }
 }
